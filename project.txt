@@ -1,0 +1,271 @@
+Microsoft Windows [Version 10.0.19042.1706]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\ADMIN>cd Downloads
+
+C:\Users\ADMIN\Downloads>cd ezyzip
+
+C:\Users\ADMIN\Downloads\ezyzip>python -m venv myenv
+
+C:\Users\ADMIN\Downloads\ezyzip>myenv\Scripts\activate
+
+(myenv) C:\Users\ADMIN\Downloads\ezyzip>pip install django
+Collecting django
+  Downloading Django-4.1.3-py3-none-any.whl (8.1 MB)
+     ---------------------------------------- 8.1/8.1 MB 581.3 kB/s eta 0:00:00
+Collecting sqlparse>=0.2.2
+  Downloading sqlparse-0.4.3-py3-none-any.whl (42 kB)
+     ---------------------------------------- 42.8/42.8 kB 2.2 MB/s eta 0:00:00
+Collecting tzdata
+  Downloading tzdata-2022.6-py2.py3-none-any.whl (338 kB)
+     ---------------------------------------- 338.8/338.8 kB 1.7 MB/s eta 0:00:00
+Collecting asgiref<4,>=3.5.2
+  Using cached asgiref-3.5.2-py3-none-any.whl (22 kB)
+Installing collected packages: tzdata, sqlparse, asgiref, django
+Successfully installed asgiref-3.5.2 django-4.1.3 sqlparse-0.4.3 tzdata-2022.6
+
+[notice] A new release of pip available: 22.2.2 -> 22.3
+[notice] To update, run: python.exe -m pip install --upgrade pip
+
+(myenv) C:\Users\ADMIN\Downloads\ezyzip>pip install djangorestframework
+Collecting djangorestframework
+  Downloading djangorestframework-3.14.0-py3-none-any.whl (1.1 MB)
+     ---------------------------------------- 1.1/1.1 MB 1.4 MB/s eta 0:00:00
+Requirement already satisfied: django>=3.0 in c:\users\admin\downloads\ezyzip\myenv\lib\site-packages (from djangorestframework) (4.1.3)
+Collecting pytz
+  Downloading pytz-2022.6-py2.py3-none-any.whl (498 kB)
+     ---------------------------------------- 498.1/498.1 kB 1.4 MB/s eta 0:00:00
+Requirement already satisfied: sqlparse>=0.2.2 in c:\users\admin\downloads\ezyzip\myenv\lib\site-packages (from django>=3.0->djangorestframework) (0.4.3)
+Requirement already satisfied: asgiref<4,>=3.5.2 in c:\users\admin\downloads\ezyzip\myenv\lib\site-packages (from django>=3.0->djangorestframework) (3.5.2)
+Requirement already satisfied: tzdata in c:\users\admin\downloads\ezyzip\myenv\lib\site-packages (from django>=3.0->djangorestframework) (2022.6)
+Installing collected packages: pytz, djangorestframework
+Successfully installed djangorestframework-3.14.0 pytz-2022.6
+
+[notice] A new release of pip available: 22.2.2 -> 22.3
+[notice] To update, run: python.exe -m pip install --upgrade pip
+
+(myenv) C:\Users\ADMIN\Downloads\ezyzip>pip install django-rest-knox
+Collecting django-rest-knox
+  Downloading django_rest_knox-4.2.0-py3-none-any.whl (13 kB)
+Requirement already satisfied: djangorestframework in c:\users\admin\downloads\ezyzip\myenv\lib\site-packages (from django-rest-knox) (3.14.0)
+Requirement already satisfied: django>=3.2 in c:\users\admin\downloads\ezyzip\myenv\lib\site-packages (from django-rest-knox) (4.1.3)
+Collecting cryptography
+  Downloading cryptography-38.0.1-cp36-abi3-win_amd64.whl (2.4 MB)
+     ---------------------------------------- 2.4/2.4 MB 1.3 MB/s eta 0:00:00
+Requirement already satisfied: asgiref<4,>=3.5.2 in c:\users\admin\downloads\ezyzip\myenv\lib\site-packages (from django>=3.2->django-rest-knox) (3.5.2)
+Requirement already satisfied: tzdata in c:\users\admin\downloads\ezyzip\myenv\lib\site-packages (from django>=3.2->django-rest-knox) (2022.6)
+Requirement already satisfied: sqlparse>=0.2.2 in c:\users\admin\downloads\ezyzip\myenv\lib\site-packages (from django>=3.2->django-rest-knox) (0.4.3)
+Collecting cffi>=1.12
+  Downloading cffi-1.15.1-cp310-cp310-win_amd64.whl (179 kB)
+     ---------------------------------------- 179.1/179.1 kB 2.2 MB/s eta 0:00:00
+Requirement already satisfied: pytz in c:\users\admin\downloads\ezyzip\myenv\lib\site-packages (from djangorestframework->django-rest-knox) (2022.6)
+Collecting pycparser
+  Downloading pycparser-2.21-py2.py3-none-any.whl (118 kB)
+     ---------------------------------------- 118.7/118.7 kB 3.5 MB/s eta 0:00:00
+Installing collected packages: pycparser, cffi, cryptography, django-rest-knox
+Successfully installed cffi-1.15.1 cryptography-38.0.1 django-rest-knox-4.2.0 pycparser-2.21
+
+[notice] A new release of pip available: 22.2.2 -> 22.3
+[notice] To update, run: python.exe -m pip install --upgrade pip
+
+(myenv) C:\Users\ADMIN\Downloads\ezyzip>cd sample_project
+
+(myenv) C:\Users\ADMIN\Downloads\ezyzip\sample_project>python manage.py runserver
+C:\Users\ADMIN\AppData\Local\Programs\Python\Python310\python.exe: can't open file 'C:\\Users\\ADMIN\\Downloads\\ezyzip\\sample_project\\manage.py': [Errno 2] No such file or directory
+
+(myenv) C:\Users\ADMIN\Downloads\ezyzip\sample_project>cd project
+
+(myenv) C:\Users\ADMIN\Downloads\ezyzip\sample_project\project>python manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python310\lib\crypt.py", line 6, in <module>
+    import _crypt
+ModuleNotFoundError: No module named '_crypt'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python310\lib\threading.py", line 1016, in _bootstrap_inner
+    self.run()
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python310\lib\threading.py", line 953, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\ADMIN\Downloads\ezyzip\myenv\lib\site-packages\django\utils\autoreload.py", line 64, in wrapper
+    fn(*args, **kwargs)
+  File "C:\Users\ADMIN\Downloads\ezyzip\myenv\lib\site-packages\django\core\management\commands\runserver.py", line 134, in inner_run
+    self.check(display_num_errors=True)
+  File "C:\Users\ADMIN\Downloads\ezyzip\myenv\lib\site-packages\django\core\management\base.py", line 475, in check
+    all_issues = checks.run_checks(
+  File "C:\Users\ADMIN\Downloads\ezyzip\myenv\lib\site-packages\django\core\checks\registry.py", line 88, in run_checks
+    new_errors = check(app_configs=app_configs, databases=databases)
+  File "C:\Users\ADMIN\Downloads\ezyzip\myenv\lib\site-packages\django\core\checks\urls.py", line 14, in check_url_config
+    return check_resolver(resolver)
+  File "C:\Users\ADMIN\Downloads\ezyzip\myenv\lib\site-packages\django\core\checks\urls.py", line 24, in check_resolver
+    return check_method()
+  File "C:\Users\ADMIN\Downloads\ezyzip\myenv\lib\site-packages\django\urls\resolvers.py", line 494, in check
+    for pattern in self.url_patterns:
+  File "C:\Users\ADMIN\Downloads\ezyzip\myenv\lib\site-packages\django\utils\functional.py", line 57, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "C:\Users\ADMIN\Downloads\ezyzip\myenv\lib\site-packages\django\urls\resolvers.py", line 715, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "C:\Users\ADMIN\Downloads\ezyzip\myenv\lib\site-packages\django\utils\functional.py", line 57, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "C:\Users\ADMIN\Downloads\ezyzip\myenv\lib\site-packages\django\urls\resolvers.py", line 708, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python310\lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "C:\Users\ADMIN\Downloads\ezyzip\sample_project\project\project\urls.py", line 21, in <module>
+    path('', include('core.urls'))
+  File "C:\Users\ADMIN\Downloads\ezyzip\myenv\lib\site-packages\django\urls\conf.py", line 38, in include
+    urlconf_module = import_module(urlconf_module)
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python310\lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "C:\Users\ADMIN\Downloads\ezyzip\sample_project\project\core\urls.py", line 4, in <module>
+    from . import views
+  File "C:\Users\ADMIN\Downloads\ezyzip\sample_project\project\core\views.py", line 1, in <module>
+    from crypt import methods
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python310\lib\crypt.py", line 9, in <module>
+    raise ImportError("The crypt module is not supported on Windows")
+ImportError: The crypt module is not supported on Windows
+
+(myenv) C:\Users\ADMIN\Downloads\ezyzip\sample_project\project>python manage.py makemigrations
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python310\lib\crypt.py", line 6, in <module>
+    import _crypt
+ModuleNotFoundError: No module named '_crypt'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\Downloads\ezyzip\sample_project\project\manage.py", line 22, in <module>
+    main()
+  File "C:\Users\ADMIN\Downloads\ezyzip\sample_project\project\manage.py", line 18, in main
+    execute_from_command_line(sys.argv)
+  File "C:\Users\ADMIN\Downloads\ezyzip\myenv\lib\site-packages\django\core\management\__init__.py", line 446, in execute_from_command_line
+    utility.execute()
+  File "C:\Users\ADMIN\Downloads\ezyzip\myenv\lib\site-packages\django\core\management\__init__.py", line 440, in execute
+    self.fetch_command(subcommand).run_from_argv(self.argv)
+  File "C:\Users\ADMIN\Downloads\ezyzip\myenv\lib\site-packages\django\core\management\base.py", line 402, in run_from_argv
+    self.execute(*args, **cmd_options)
+  File "C:\Users\ADMIN\Downloads\ezyzip\myenv\lib\site-packages\django\core\management\base.py", line 443, in execute
+    self.check()
+  File "C:\Users\ADMIN\Downloads\ezyzip\myenv\lib\site-packages\django\core\management\base.py", line 475, in check
+    all_issues = checks.run_checks(
+  File "C:\Users\ADMIN\Downloads\ezyzip\myenv\lib\site-packages\django\core\checks\registry.py", line 88, in run_checks
+    new_errors = check(app_configs=app_configs, databases=databases)
+  File "C:\Users\ADMIN\Downloads\ezyzip\myenv\lib\site-packages\django\core\checks\urls.py", line 14, in check_url_config
+    return check_resolver(resolver)
+  File "C:\Users\ADMIN\Downloads\ezyzip\myenv\lib\site-packages\django\core\checks\urls.py", line 24, in check_resolver
+    return check_method()
+  File "C:\Users\ADMIN\Downloads\ezyzip\myenv\lib\site-packages\django\urls\resolvers.py", line 494, in check
+    for pattern in self.url_patterns:
+  File "C:\Users\ADMIN\Downloads\ezyzip\myenv\lib\site-packages\django\utils\functional.py", line 57, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "C:\Users\ADMIN\Downloads\ezyzip\myenv\lib\site-packages\django\urls\resolvers.py", line 715, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "C:\Users\ADMIN\Downloads\ezyzip\myenv\lib\site-packages\django\utils\functional.py", line 57, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "C:\Users\ADMIN\Downloads\ezyzip\myenv\lib\site-packages\django\urls\resolvers.py", line 708, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python310\lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "C:\Users\ADMIN\Downloads\ezyzip\sample_project\project\project\urls.py", line 21, in <module>
+    path('', include('core.urls'))
+  File "C:\Users\ADMIN\Downloads\ezyzip\myenv\lib\site-packages\django\urls\conf.py", line 38, in include
+    urlconf_module = import_module(urlconf_module)
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python310\lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "C:\Users\ADMIN\Downloads\ezyzip\sample_project\project\core\urls.py", line 4, in <module>
+    from . import views
+  File "C:\Users\ADMIN\Downloads\ezyzip\sample_project\project\core\views.py", line 1, in <module>
+    from crypt import methods
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python310\lib\crypt.py", line 9, in <module>
+    raise ImportError("The crypt module is not supported on Windows")
+ImportError: The crypt module is not supported on Windows
+
+(myenv) C:\Users\ADMIN\Downloads\ezyzip\sample_project\project>python manage.py makemigrations
+No changes detected
+
+(myenv) C:\Users\ADMIN\Downloads\ezyzip\sample_project\project>
+(myenv) C:\Users\ADMIN\Downloads\ezyzip\sample_project\project>python manage.py migrate
+Operations to perform:
+  Apply all migrations: admin, auth, contenttypes, core, knox, sessions
+Running migrations:
+  No migrations to apply.
+
+(myenv) C:\Users\ADMIN\Downloads\ezyzip\sample_project\project>python manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+November 01, 2022 - 13:55:20
+Django version 4.1.3, using settings 'project.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+Not Found: /
+[01/Nov/2022 13:55:43] "GET / HTTP/1.1" 404 3685
+Not Found: /favicon.ico
+[01/Nov/2022 13:55:43] "GET /favicon.ico HTTP/1.1" 404 3736
+Method Not Allowed: /login/
+[01/Nov/2022 14:03:32] "GET /login/ HTTP/1.1" 405 40
+[01/Nov/2022 14:03:42] "POST /login/ HTTP/1.1" 200 115
+[01/Nov/2022 14:05:20] "GET /user/ HTTP/1.1" 200 157
+Bad Request: /user/
+[01/Nov/2022 14:11:35] "POST /user/ HTTP/1.1" 400 48
+[01/Nov/2022 14:12:05] "POST /user/ HTTP/1.1" 200 157
+Bad Request: /user/
+[01/Nov/2022 14:36:49] "POST /user/ HTTP/1.1" 400 87
+[01/Nov/2022 14:37:38] "POST /user/ HTTP/1.1" 200 157
+[01/Nov/2022 14:37:52] "GET /user/ HTTP/1.1" 200 473
+Method Not Allowed: /user/
+[01/Nov/2022 14:39:39] "PUT /user/ HTTP/1.1" 405 40
+[01/Nov/2022 14:39:54] "POST /user/ HTTP/1.1" 200 154
+Internal Server Error: /user/7
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\Downloads\ezyzip\myenv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\ADMIN\Downloads\ezyzip\myenv\lib\site-packages\django\utils\deprecation.py", line 135, in __call__
+    response = self.process_request(request)
+  File "C:\Users\ADMIN\Downloads\ezyzip\myenv\lib\site-packages\django\middleware\common.py", line 54, in process_request
+    path = self.get_full_path_with_slash(request)
+  File "C:\Users\ADMIN\Downloads\ezyzip\myenv\lib\site-packages\django\middleware\common.py", line 88, in get_full_path_with_slash
+    raise RuntimeError(
+RuntimeError: You called this URL via PUT, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining PUT data. Change your form to point to localhost:8000/user/7/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+[01/Nov/2022 14:41:57] "PUT /user/7 HTTP/1.1" 500 68434
+[01/Nov/2022 14:42:14] "GET /user/ HTTP/1.1" 200 628
+Method Not Allowed: /user/
+[01/Nov/2022 14:43:42] "PUT /user/ HTTP/1.1" 405 40
+Bad Request: /user/
+[01/Nov/2022 14:44:29] "POST /user/ HTTP/1.1" 400 87
+[01/Nov/2022 14:45:19] "POST /user/ HTTP/1.1" 200 157
+Method Not Allowed: /user/
+[01/Nov/2022 14:46:18] "PUT /user/ HTTP/1.1" 405 40
+Method Not Allowed: /user/
+[01/Nov/2022 14:48:13] "PUT /user/?username=vikash&email=vikash@gmail.com&id=8 HTTP/1.1" 405 40
+[01/Nov/2022 14:48:27] "GET /user/ HTTP/1.1" 200 786
